@@ -101,9 +101,10 @@ i {
     font-size: 1.2em;
 }
 
-body.dark-mode {
+body.dark-mode, html.dark-mode {
     background-color: hsl(240, 27%, 18%);
 }
+
 
 body.dark-mode .calculator-item button {
     color: hsl(21, 35%, 92%);
