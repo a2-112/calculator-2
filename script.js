@@ -1,7 +1,7 @@
 
 const review= document.getElementById("insert");
 const themeToggle = document.getElementById('theme-toggle');
-const body = document.html;
+const body = document.html.body;
 // const percentageButton = document.getElementById('percent');
 
 function appendToDisplay(input){
