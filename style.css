@@ -103,6 +103,7 @@ i {
 
 body.dark-mode, html.dark-mode {
     background-color: hsl(240, 27%, 18%);
+    min-height:100vh;
 }
 
 
