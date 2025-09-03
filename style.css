@@ -103,7 +103,6 @@ i {
 
 body.dark-mode {
     background-color: hsl(240, 27%, 18%);
-
     .calculator-item button {
         color: hsl(21, 35%, 92%);
     }
