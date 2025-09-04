@@ -2,7 +2,7 @@
 const review= document.getElementById("insert");
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
-
+// const percentageButton = document.getElementById('percent');
 
 function appendToDisplay(input){
     review.value += input;
@@ -15,6 +15,10 @@ function clearDisplay(){
 function deleteDisplay(){
     review.value = review.value.slice(0, -1);
 }
+function percentageDisplay(){
+    review.value = review.value/100;
+}
+
 function calculate(){
     try{
          review.value = eval(review.value)

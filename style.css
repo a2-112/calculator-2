@@ -11,14 +11,15 @@ body {
     margin: 0 auto;
     display: grid;
     height: 100vh;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: 'Sora', sans-serif;
+    font-weight: 600;
 }
 
 main {
     display: grid;
     width: 100%;
-   
+
 }
 
 .display-con {
@@ -28,10 +29,10 @@ main {
 
 .calculator-item {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(90px, 1fr));
     place-content: center;
     gap: 1.2rem;
-    padding: 0.5em 0.2em;
+    padding: 0 0.2em;
 }
 
 button {
@@ -40,6 +41,7 @@ button {
     border: none;
     background-color: transparent;
     font-size: 1.2rem;
+    font-weight: 700;
     box-shadow: 1px 1px 4px hsl(309, 6%, 58%);
     cursor: pointer;
     color: hsl(232, 17%, 35%);
@@ -47,7 +49,7 @@ button {
 }
 
 input {
-    height: 8em;
+    height: 7em;
     width: 100%;
     background-color: transparent;
     border: none;
@@ -66,7 +68,7 @@ input {
     justify-content: space-between;
     border-radius: 10px;
     padding: 1em;
-    margin: 1em 0;
+    margin: 0.5em 0;
     background-color: hsl(11, 24%, 72%);
 }
 
@@ -87,25 +89,39 @@ i {
     margin: 0.5em;
     color: hsl(232, 17%, 35%);
 }
+
 #theme-toggle {
     display: block;
     text-align: right;
     border: none;
-    margin: 0.5em ;
+    margin: 0.5em 1.2em;
     padding: 0;
     background-color: transparent;
     box-shadow: none;
     cursor: pointer;
-    font-size: 2rem;
-    
 }
-#theme-toggle i{
+
+#theme-toggle i {
     color: hsl(11, 24%, 72%);
-    font-size: 1.5rem;
-    text-align: left;
+    font-size: 1.2em;
 }
+
 body.dark-mode {
-    background-color:hsl(240, 27%, 18%);
+    background-color: hsl(240, 27%, 18%);
+
+    .calculator-item button {
+        color: hsl(21, 35%, 92%);
+    }
+
+    #clear {
+        color: hsl(232, 17%, 35%);
+    }
+}
+
+#theme-toggle::selection,
+button::selection,
+aside::selection {
+    background-color: transparent;
 }
 
 #basic-cal,
@@ -129,38 +145,37 @@ body.dark-mode {
     color: hsl(21, 35%, 92%);
 }
 
-#clear { 
-background-color: hsl(11, 24%, 72%); 
- }
+#clear {
+    background-color: hsl(11, 24%, 72%);
+}
 
-button:hover,
-.operators:hover{
-    background-color:hsl(11, 24%, 72%);
+.calculator-item button:hover {
+    background-color: hsl(309, 6%, 58%);
 }
 
 #clear:hover {
-    background-color:hsl(240, 27%, 18%);
+    background-color: hsl(240, 27%, 18%);
     color: hsl(21, 35%, 92%);
-    
 }
-button:focus {
-transform: scale(0.8);
-box-shadow: none;
+
+.calculator-item button:active {
+    transform: scale(0.8);
+    box-shadow: none;
 }
+
 @media screen and (min-width: 768px) {
     main {
         max-width: 500px;
         margin: 1em auto;
         padding: 1em 0;
-        border: 1px solid hsl(309, 6%, 58%);
+        border: 2px solid hsl(309, 6%, 58%);
+        border-radius: 10px;
         display: block;
     }
-    input{
-        height: 5em;
-    }
-    .calculator-item {
-        gap: 1rem;
-    }
-    
-}
 
+    input {
+        height: 6em;
+    }
+
+
+}

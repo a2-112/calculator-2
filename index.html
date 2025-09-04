@@ -11,26 +11,26 @@
 </head>
 
 <body>
- 
-   
+
+
     <main>
-            <button  id="theme-toggle">
-<i class='far fa-sun'></i>
-            </button>
-               
+        <button id="theme-toggle">
+            <i class='far fa-sun'></i>
+        </button>
+
         <div class="display-con">
             <!-- readonly make the input to display only when something is inputted in js -->
             <input id="insert">
 
             <div class="functions">
-            <i class='fas fa-history' onclick="history()"></i>
-                    <i class='far fa-trash-alt' onclick="deleteDisplay()"></i>
+                <i class='fas fa-history' onclick="history()"></i>
+                <i class='far fa-trash-alt' onclick="deleteDisplay()"></i>
             </div>
             <div class="calculator-item">
                 <button onclick="clearDisplay()" id="clear">C</button>
                 <button onclick="appendToDisplay('.')" class="operators">.</button>
-                <button onclick="appendToDisplay('%')" class="operators">%</button>
-                <button onclick="appendToDisplay('/')" class="operators"><i class='fas fa-divide'></i></button>
+                <button onclick="percentageDisplay('%')" class="operators">%</button>
+                <button onclick="appendToDisplay('/')" id="percent" class="operators"><i class='fas fa-divide'></i></button>
                 <button onclick="appendToDisplay('7')">7</button>
                 <button onclick="appendToDisplay('8')">8</button>
                 <button onclick="appendToDisplay('9')">9</button>
@@ -44,10 +44,9 @@
                 <button onclick="appendToDisplay('3')">3</button>
                 <button onclick="appendToDisplay('+')" class="operators"><i class='fas fa-plus'></i></button>
                 <button onclick="appendToDisplay('0')">0</button>
-             <button onclick="appendToDisplay('00')" class="operators">00</button>
+                <button onclick="appendToDisplay('00')" class="operators">00</button>
                 <button onclick="appendToDisplay('000')" class="operators">000</button>
-          <button onclick="calculate()" class="operators"><i class='fas fa-equals'></i></button>
-       
+                <button onclick="calculate()" class="operators"><i class='fas fa-equals'></i></button>
             </div>
 
             <aside>
@@ -60,4 +59,5 @@
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>
