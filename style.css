@@ -6,33 +6,27 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     background-color: hsl(21, 35%, 92%);
     margin: 0 auto;
     display: grid;
-    height: 100vh;
+    height: 100%;
     font-size: 1rem;
     font-family: 'Sora', sans-serif;
     font-weight: 600;
-}
-
-main {
-    display: grid;
     width: 100%;
-
 }
-
 .display-con {
-    width: 100%;
     padding: 0 1em;
+    height: 100vh;
 }
 
 .calculator-item {
     display: grid;
     grid-template-columns: repeat(4, minmax(90px, 1fr));
     place-content: center;
-    gap: 1.2rem;
-    padding: 0 0.2em;
+    gap: 1.4rem;
+    padding: 1em 0.2em;
 }
 
 button {
@@ -68,12 +62,13 @@ input {
     justify-content: space-between;
     border-radius: 10px;
     padding: 1em;
-    margin: 0.5em 0;
+    margin: 1.2em 0;
     background-color: hsl(11, 24%, 72%);
 }
 
 .functions i {
     color: hsl(232, 17%, 35%);
+    font-size:1.2em ;
 }
 
 i {
@@ -86,7 +81,7 @@ i {
     align-items: center;
     border-radius: 10px;
     box-shadow: 1px 1px 4px hsl(309, 6%, 58%);
-    margin: 0.5em;
+    margin:1em 0.2em;
     color: hsl(232, 17%, 35%);
 }
 
@@ -94,7 +89,7 @@ i {
     display: block;
     text-align: right;
     border: none;
-    margin: 0.5em 1.2em;
+    margin:1em 1.2em ;
     padding: 0;
     background-color: transparent;
     box-shadow: none;
@@ -106,7 +101,7 @@ i {
     font-size: 1.2em;
 }
 
-body.dark-mode {
+html, body.dark-mode {
     background-color: hsl(240, 27%, 18%);
 
     .calculator-item button {
@@ -115,6 +110,9 @@ body.dark-mode {
 
     #clear {
         color: hsl(232, 17%, 35%);
+    }
+    input{
+        color: hsl(21, 35%, 92%);
     }
 }
 
@@ -162,20 +160,33 @@ aside::selection {
     transform: scale(0.8);
     box-shadow: none;
 }
+article{
+    display: none;
+}
 
 @media screen and (min-width: 768px) {
+    html,body{
+    display: flex;
+       justify-content: space-between;
+     margin:auto;
+        overflow: hidden;
+     
+    }
     main {
-        max-width: 500px;
-        margin: 1em auto;
-        padding: 1em 0;
-        border: 2px solid hsl(309, 6%, 58%);
-        border-radius: 10px;
-        display: block;
+        width: 70%;
     }
 
     input {
         height: 6em;
     }
-
+    .calculator-item {
+        gap: 1rem;
+    }
+article {
+    display: block;
+   margin: 1em 1em 1em auto;
+    color:hsl(11, 24%, 72%);
+    width: 30%;
+}
 
 }

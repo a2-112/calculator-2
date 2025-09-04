@@ -23,7 +23,7 @@
             <input id="insert">
 
             <div class="functions">
-                <i class='fas fa-history' onclick="history()"></i>
+                <i class='fas fa-history history' onclick="history()"></i>
                 <i class='far fa-trash-alt' onclick="deleteDisplay()"></i>
             </div>
             <div class="calculator-item">
@@ -48,7 +48,6 @@
                 <button onclick="appendToDisplay('000')" class="operators">000</button>
                 <button onclick="calculate()" class="operators"><i class='fas fa-equals'></i></button>
             </div>
-
             <aside>
                 <div class="switch">
                     <div id="basic-cal" class="active">123</div>
@@ -57,6 +56,15 @@
             </aside>
         </div>
     </main>
+    <article>
+        <h2>History</h2>
+        <div class="history-con">
+            <ul id="history-list">
+                <!-- History items will be appended here -->
+            </ul>
+        </div>
+    </article>
+        
     <script src="script.js"></script>
 </body>
 
