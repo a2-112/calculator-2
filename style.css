@@ -17,11 +17,11 @@ html, body {
     width: 100%;
 }
 main{
-height: 100vh;
+    height: 100vh;
 }
 .display-con {
     padding: 0 1em;
-   
+    height: 100vh;
 }
 
 .calculator-item {
@@ -104,7 +104,7 @@ i {
     font-size: 1.2em;
 }
 
-html, body.dark-mode {
+body.dark-mode {
     background-color: hsl(240, 27%, 18%);
 
     .calculator-item button {
